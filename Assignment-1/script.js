@@ -8,6 +8,10 @@ let data = [[],[],[],[],[]];
 
 window.addEventListener("load",getTableData);
 
+//@getTableData : 
+//This function gets the existing data from table
+//and adds it to a "tableData" array
+//Then we reformat this tableData into a well organised 2-d array "data"
 function getTableData(){
     
     for (let i = 1; i < rowLength; i++)
@@ -42,7 +46,7 @@ addBottom[0].addEventListener('click',()=>{
     addData(false);
 });
 
-
+//@clearTable : clears the HTML table
 function clearTable() {
     for(let i = 1;table.rows.length>1;i++)
     {
@@ -51,6 +55,10 @@ function clearTable() {
 }
 
 
+//@addData:
+//we add data to last position or first position based on the boolean passed
+//Each value to be added in new row is randomly selected from existing ones 
+//Then it calls generateTable() function
 function addData(top){
 
     for (let i = 0; i < data.length; i++)
@@ -69,7 +77,8 @@ function addData(top){
     generateTable();
 }
 
-
+//@generateTable:
+//generates a fresh new table from "data" 2-d array
 function generateTable(){
 
     const tableBody = document.createElement("tbody");

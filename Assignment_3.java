@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Assignment_3 {
     
     static void myMethod(String sentence, char letter) {
+        
         int firstIndex = sentence.indexOf(letter);
         
         if(firstIndex>=0){  
@@ -12,7 +13,8 @@ public class Assignment_3 {
         else{ 
             System.out.println("The letter does not exist in the sentence!");
         }
-      }
+      
+    }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
